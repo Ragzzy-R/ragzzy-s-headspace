@@ -15,10 +15,10 @@ const siteMetadata = {
   socialBanner: '/static/images/twitter-card.png',
   email: 'address@yoursite.com',
   github: 'https://github.com/Ragzzy-R',
-  twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
+  twitter: 'https://twitter.com/ragzzyr',
+  facebook: '',
+  youtube: 'https://www.youtube.com/@ragzzytv',
+  linkedin: 'https://in.linkedin.com/in/ragzzyr',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
