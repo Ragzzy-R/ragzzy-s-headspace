@@ -1,19 +1,9 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
-  },
-  {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    title: 'Ragzzy TV',
+    description: `This is my personal channel where I post a lot of stuff from playing games to my blender projects. There is nothing of value here unless you want a bunch of goofing around`,
+    imgSrc: '/static/images/yt_logo.gif',
+    href: 'https://www.youtube.com/@ragzzytv',
   },
 ]
 
