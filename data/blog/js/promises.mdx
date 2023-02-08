@@ -1,0 +1,87 @@
+---
+title: Promises in Javascript
+date: '2023-02-08'
+tags: ['js', 'promises', 'chatGPT']
+draft: false
+summary: chatGPT made this
+---
+
+---
+
+**Note:** *This content is made by chatGPT. I wanted to test how good it can generate random blog posts, so I asked chatGPT
+to write me a blog post about promises and async..await with some tweaking parameters and this is what it gave as a final result.*
+
+---
+
+# **Promises in JavaScript**
+
+Hey there! Today we're gonna talk about promises in JavaScript. Promises are basically a way of handling asynchronous operations in a cleaner, more organized way. If you've been working with JavaScript for a bit, you might have come across callbacks, which are great and all, but can get a bit messy when you're dealing with a lot of async operations. That's where promises come in.
+
+Think of a promise as a "promise" to give you a value in the future. A promise can either resolve (fulfill its promise) with a value or reject (break its promise) with an error. You can then handle these resolved or rejected values with **`.then`** and **`.catch`** respectively.
+
+Here's a simple example of a promise that resolves after 2 seconds:
+
+```javascript
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("The promise resolved!");
+  }, 2000);
+});
+
+myPromise
+  .then(value => console.log(value))
+  .catch(error => console.error(error));
+```
+
+As you can see, we create a new promise by passing in a callback with **`resolve`** and **`reject`** as arguments. In this example, we use **`setTimeout`** to simulate some async operation. After 2 seconds, **`resolve`** is called with a value of **`"The promise resolved!"`**. We can then use **`.then`** to handle the resolved value, and **`.catch`** to handle any errors that might occur.
+
+You can also chain multiple **`.then`** and **`.catch`** calls for more complex async operations:
+
+```javascript
+myPromise
+  .then(value => {
+    console.log(value);
+    return "Chained then!";
+  })
+  .then(chainedValue => console.log(chainedValue))
+  .catch(error => console.error(error));
+```
+
+Here, we add another **`.then`** call after the first one. The return value of the first **`.then`** call becomes the input to the next **`.then`** call, allowing us to chain them together.
+
+Promises are really useful when working with APIs, databases, and other async operations. They make your code more organized, easier to read, and allow you to handle errors in a cleaner way.
+
+So that's a quick intro to promises in JavaScript! If you haven't used them before, I highly recommend giving them a shot. They're a game-changer!
+
+# **Async/Await in JavaScript**
+
+Another way of working with async operations in JavaScript is **`async/await`**. **`async/await`** is essentially just a more concise and readable way of working with promises.
+
+Here's an example of the same async operation we saw earlier, but using **`async/await`**:
+
+```javascript
+const myAsyncFunction = async () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("The promise resolved!");
+    }, 2000);
+  });
+};
+
+(async () => {
+  try {
+    const value = await myAsyncFunction();
+    console.log(value);
+  } catch (error) {
+    console.error(error);
+  }
+})();
+```
+
+Here, we use the **`async`** keyword to declare an **`async`** function, and the **`await`** keyword to wait for the promise to resolve. The rest of the code looks very similar to what we had with **`.then`** and **`.catch`**, but it's a bit cleaner and more readable.
+
+The difference between promises and **`async/await`** is mainly one of syntax. Promises give you a way to handle async operations with **`.then`** and **`.catch`**, while **`async/await`** provides a more concise way to handle promises. With **`async/await`**, you don't need to chain multiple **`.then`** calls to handle async operations, and error handling is done with try/catch instead of **`.catch`**.
+
+So, when should you use promises and when should you use **`async/await`**? It really comes down to personal preference. Some people prefer the verbosity of promises, while others prefer the conciseness of **`async/await`**. The important thing is to understand how both work and choose the one that works best for you.
+
+So that's a quick overview of **`async/await`**! If you haven't used it before, I highly recommend giving it a shot. It makes async operations in JavaScript a breeze!
